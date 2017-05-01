@@ -4,43 +4,63 @@
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     {% if HEADER_COVER %}
-        <header class="intro-header" style="background-image: url('{{ HEADER_COVER }}')">
+        <!-- <header class="intro-header" style="background-image: url('{{ HEADER_COVER }}')"> -->
     {% elif HEADER_COLOR %}
-        <header class="intro-header" style="background-color: {{ HEADER_COLOR }}">
+        <!-- <header class="intro-header" style="background-color: {{ HEADER_COLOR }}"> -->
     {% else %}
-        <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/home-bg.jpg')">
+        <!-- <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/home-bg.jpg')"> -->
     {% endif %}
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="page-heading">
-                        <h1>{{ SITENAME }}</h1>
-                        {% if SITESUBTITLE %}
-                            <hr class="small">
-                            <span class="subheading">{{ SITESUBTITLE }}</span>
-                        {% endif %}
-                        {% if SOCIAL and SHOW_SOCIAL_ON_INDEX_PAGE_HEADER %}
-                            <ul class="list-inline text-center">
-                            {% for name,link in SOCIAL %}
-                                <li>
-                                    <a href="{{ link }}">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-{{ name|lower }} fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            {% endfor %}
-                            </ul>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+
 {% endblock header %}
 
 {% block content %}
-    {% for article in articles_page.object_list %}
+    {% for article in articles_page.object_list[:1] %}
+        <a href="{{ article.url }}">
+        <div class="first-article">
+            {% if article.header_cover %}
+                <div class="first-article-image" style="background-image: url({{article.header_cover}})">
+                </div>
+            {% else %}
+                <div class="first-article-image" style="background-image: url({{HEADER_COVER}})">
+                </div>
+            {% endif %}
+            <div class="first-summary-article">
+                <div class="first-inner-article">
+                    <h2 class="post-title">
+                        {{ article.title }}
+                    </h2>
+                    <p>
+                        {{ article.summary|striptags|truncate(140) }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        </a>
+    {% endfor %}
+    <div class="secondary-articles">
+    {% for article in articles_page.object_list[1:4] %}
+        <a href="{{ article.url }}">
+            <div class="secondary-article">
+                {% if article.header_cover %}
+                    <div class="secondary-image" style="background-image: url({{article.header_cover}})">
+                    </div>
+                {% else %}
+                    <div class="secondary-image" style="background-image: url({{HEADER_COVER}})">
+                    </div>
+                {% endif %}
+                <div class="secondary-inner-article">
+                    <h2 class="post-title">
+                        {{ article.title }}
+                    </h2>
+                    <p>
+                        {{ article.summary|striptags|truncate(140) }}
+                    </p>
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+    </div>
+    {% for article in articles_page.object_list[4:] %}
         <div class="post-preview">
             <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
                 <h2 class="post-title">

@@ -28,11 +28,11 @@ h6 {
   font-weight: 800;
 }
 a {
-  color: #0085a1;
+  color: #404040;
 }
 a:hover,
 a:focus {
-  color: #0057a2;
+  color: #0085a1;
 }
 a img:hover,
 a img:focus {
@@ -52,6 +52,12 @@ hr.small {
   border-width: 4px;
   border-color: white;
 }
+.container {
+    padding-top: 80px;
+}
+footer > div.container {
+    padding-top: 0px;
+}
 .navbar-custom {
   position: absolute;
   top: 0;
@@ -63,11 +69,71 @@ hr.small {
 .navbar-custom .navbar-brand {
   font-weight: 800;
 }
+
 .navbar-custom .nav li a {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 1px;
+}
+.first-article {
+    width: 100%;
+    height: 352px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+.first-article-image {
+    flex-grow: 2;
+    flex-basis: 0;
+    margin: 12px;
+    margin-right: 0px;
+    background-size: cover;
+    background-position: center;
+}
+.first-summary-article {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 12px;
+}
+.first-inner-article {
+    padding: 18px;
+    padding-top: 0px;
+}
+.secondary-articles{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 460px;
+}
+.secondary-article {
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 100%;
+    padding: 12px;
+}
+.secondary-image {
+    background-size: cover;
+    background-position: center;
+    height: 172px;
+}
+.secondary-inner-article {
+    width: 100%;
+}
+article {
+    padding-left: 160px;
+    padding-right: 160px;
+}
+.article-image {
+    width: 100%;
+    height: 240px;
+    background-size: cover;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.post-author {
+    text-align: right;
+    color: #858585;
 }
 @media only screen and (min-width: 768px) {
   .navbar-custom {
@@ -75,11 +141,11 @@ hr.small {
     border-bottom: 1px solid transparent;
   }
   .navbar-custom .navbar-brand {
-    color: white;
+    color: #404040;
     padding: 20px;
   }
-  .navbar-custom .navbar-brand:hover,
-  .navbar-custom .navbar-brand:focus {
+  .navbar-custom,
+  .navbar-custom {
     color: rgba(255, 255, 255, 0.8);
   }
   .navbar-custom .nav li a {
@@ -270,7 +336,7 @@ hr.small {
   border-bottom-left-radius: 5px;
 }
 footer {
-  padding: 50px 0 65px;
+  padding: 24px 0 24px;
 }
 footer .list-inline {
   margin: 0;
