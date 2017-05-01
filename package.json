@@ -1,0 +1,23 @@
+{
+  "name": "sennav-clean-blog",
+  "version": "1.0.0",
+  "description": "Theme based in [Clean Blog layout](http://ironsummitmedia.github.io/startbootstrap-clean-blog/).",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sennav/pelican-clean-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sennav/pelican-clean-blog/issues"
+  },
+  "homepage": "https://github.com/sennav/pelican-clean-blog#readme",
+  "devDependencies": {
+    "gulp-clean-css": "^3.0.4",
+    "gulp-rename": "^1.2.2"
+  }
+}
