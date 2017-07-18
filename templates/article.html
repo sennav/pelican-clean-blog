@@ -99,6 +99,13 @@
             {% endfor %}
             <br>
             {{ article.locale_date }}
+            <br>
+            {% if article.translations %}
+                <i class="fa fa-language" aria-hidden="true"></i>
+                {% for translation in article.translations %}
+                <a href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a>
+                {% endfor %}
+            {% endif %}
         </div>
         {% if article.header_cover %}
             <div class="article-image" style="background-image: url({{ article.header_cover }})">
