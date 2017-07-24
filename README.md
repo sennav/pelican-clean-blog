@@ -1,6 +1,6 @@
-# Pelican Clean Blog Theme
+# Pelican Sennav Clean Blog Theme
 
-Theme based in [Clean Blog layout](http://ironsummitmedia.github.io/startbootstrap-clean-blog/).
+This theme is based in [Pelican Clean Blog](https://github.com/gilsondev/pelican-clean-blog) and tries to incorporate some ideas from [complexity reduction design trend](https://medium.com/swarm-nyc/complexion-reduction-a-new-trend-in-mobile-design-cef033a0b978).
 
 ## Screenshot
 
@@ -17,6 +17,8 @@ To define custom header cover, set the property ``HEADER_COVER`` in ``pelicancon
 ```python
 HEADER_COVER = 'static/my_image.png'
 ```
+
+This image will be used as a default for any article, it's possible to define a different header image for each article using the ``header_cover`` property at each article metadata.
 
 ### Header Color
 
@@ -103,7 +105,7 @@ will not see the desired results.
 
 ### Analytics
 
-Accept many analytics:
+It's possible to use these analytics:
 
  - Google Analytics: ``GOOGLE_ANALYTICS``;
  - Gauges: ``GAUGES``
