@@ -1,4 +1,4 @@
-# Pelican Sennav Clean Blog Theme
+# Sennav theme (for pelican blogs)
 
 This theme is based in [Pelican Clean Blog](https://github.com/gilsondev/pelican-clean-blog) and tries to incorporate some ideas from [complexity reduction design trend](https://medium.com/swarm-nyc/complexion-reduction-a-new-trend-in-mobile-design-cef033a0b978). Live preview [here](https://blog.sennav.com/).
 
