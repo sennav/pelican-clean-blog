@@ -92,6 +92,7 @@ footer > div.container {
     margin-right: 0px;
     background-size: cover;
     background-position: center;
+    background-position-y: top;
 }
 .first-summary-article {
     flex-grow: 1;
@@ -116,6 +117,7 @@ footer > div.container {
 .secondary-image {
     background-size: cover;
     background-position: center;
+    background-position-y: top;
     height: 172px;
 }
 .secondary-inner-article {
@@ -151,6 +153,7 @@ footer > div.container {
     margin: 0px;
     background-size: cover;
     background-position: center;
+    background-position-y: top;
   }
   .secondary-articles {
     display: block;
